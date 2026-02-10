@@ -26,7 +26,7 @@ public class UserService {
     private final RoleResolutionService roleResolutionService;
 
     public Optional<User> findByNationalId(String nationalId) {
-        return userRepository.findByNationalId(nationalId);
+        return userRepository.findByNationalIdAndActiveTrue(nationalId);
     }
 
     public UserResponse createUser(CreateUserRequest request) {
