@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 @Data
 @Builder
@@ -19,7 +19,7 @@ public class AttendanceResponse {
     private BigDecimal estimatedHours;
     private String comments;
 
-    private LocalDateTime createdAt;
+    private Instant createdAt;
 
     public static AttendanceResponse from(Attendance attendance) {
         return AttendanceResponse.builder()
